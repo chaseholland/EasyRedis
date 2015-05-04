@@ -11,7 +11,8 @@ EasyRedisReply::EasyRedisReply(redisReply* reply)
 
 EasyRedisReply::~EasyRedisReply()
 {
-    freeReplyObject(m_reply);
+    if (m_reply)
+        freeReplyObject(m_reply);
     m_reply = NULL;
 }
 

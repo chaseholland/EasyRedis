@@ -15,7 +15,8 @@ EasyRedis::EasyRedis(std::string host, int port)
 
 EasyRedis::~EasyRedis()
 {
-    redisFree(m_context);
+    if (m_context)
+        redisFree(m_context);
     m_context = NULL;
 }
 
@@ -29,3 +30,7 @@ EasyRedisReply EasyRedis::run_command(const char* command, ...)
     return reply;
 }
 
+const redisContext* EasyRedis::raw_redis_context()
+{
+    return m_context;
+}

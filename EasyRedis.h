@@ -19,6 +19,7 @@ class EasyRedis
         EasyRedis(std::string host, int port);
         ~EasyRedis();
         EasyRedisReply run_command(const char* command, ...);
+        const redisContext* raw_redis_context();
 };
 
 
