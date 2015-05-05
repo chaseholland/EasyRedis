@@ -19,6 +19,7 @@ include_directories(..)
 #add files with new test here
 set (test_sources
     test_easyredis.cpp
+    test_easyredis_fixture.h
 )
 
 add_executable(easyredistests ${test_sources})
