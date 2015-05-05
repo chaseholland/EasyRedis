@@ -22,4 +22,4 @@ set (test_sources
 )
 
 add_executable(easyredistests ${test_sources})
-target_link_libraries(easyredistests easyredis hiredis gtest_main)
+target_link_libraries(easyredistests gtest_main easyredis hiredis)
