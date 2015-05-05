@@ -18,7 +18,8 @@ include_directories(..)
 
 #add files with new test here
 set (test_sources
+    test_easyredis.cpp
 )
 
 add_executable(easyredistests ${test_sources})
-target_link_libraries(easyredis hiredis gtest_main)
+target_link_libraries(easyredistests easyredis hiredis gtest_main)

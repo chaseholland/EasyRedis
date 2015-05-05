@@ -17,4 +17,5 @@ set(easyredis_sources
 )
 
 add_library(easyredis SHARED ${easyredis_sources})
-target_link_libraries(easyredis hiredis)
+
+add_subdirectory(tests)
