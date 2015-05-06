@@ -9,18 +9,22 @@
 #include <hiredis/hiredis.h>
 #include "EasyRedisReply.h"
 
-class EasyRedis
+namespace easyredis
 {
-    private:
-        std::string m_host;
-        int m_port;
-        redisContext* m_context;
-    public:
-        EasyRedis(std::string host, int port);
-        ~EasyRedis();
-        EasyRedisReply run_command(const char* command, ...);
-        const redisContext* raw_redis_context();
-};
+    class EasyRedis
+    {
+        private:
+            std::string m_host;
+            int m_port;
+            redisContext* m_context;
+        public:
+            EasyRedis(std::string host, int port);
+            ~EasyRedis();
+            EasyRedisReply run_command(const char* command, ...);
+            const redisContext* raw_redis_context();
+        };
+}
+
 
 
 #endif //EASYREDIS_H

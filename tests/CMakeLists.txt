@@ -20,6 +20,7 @@ include_directories(..)
 set (test_sources
     test_easyredis.cpp
     test_easyredis_fixture.h
+    test_easyredisreply.cpp
 )
 
 add_executable(easyredistests ${test_sources})

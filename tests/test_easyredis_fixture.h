@@ -15,6 +15,8 @@ const std::string test_key_set = test_key_base + "A";
 const std::string test_value = test_key_base + "B";
 const std::string test_key_not_set = test_key_base + "C";
 
+using namespace easyredis;
+
 class EasyRedisTest: public ::testing::Test
 {
 protected:
