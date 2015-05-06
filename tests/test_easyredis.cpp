@@ -6,9 +6,7 @@
 #include "../EasyRedis.h"
 #include "test_easyredis_fixture.h"
 
-using namespace easyredis;{
-
-}
+using namespace easyredis;
 
 TEST_F (EasyRedisTest, TestContextCreation)
 {
