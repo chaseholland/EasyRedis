@@ -28,3 +28,6 @@ TEST_F(EasyRedisTest, TestReplyStringNumber)
 }
 
 TEST_F(EasyRedisTest, TestReplyNumber)
+{
+
+}
